@@ -15,7 +15,7 @@ public class AppOrderPositiveTest {
     @Test
     public void shouldBeSuccessFullForm() {
         open("http://localhost:9999");
-        SelenideElement form = $ ("[enctype=application/x-www-form-urlencoded]");
+        SelenideElement form = $ ("[div id=root]");
         form.$("[data-test-id=name] input").setValue("Иванов");
         form.$("[data-test-id=phone] input").setValue("+79064564545");
         form.$("[data-test-id=agreement]").click();
